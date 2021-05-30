@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Анастасия Быкова](https://up.htmlacademy.ru/htmlcss/31/user/963263).
-* Наставник: [Дмитрий Беллавин](https://htmlacademy.ru/profile/bellavin)
+* Наставник: [Дмитрий Беллавин](https://htmlacademy.ru/profile/bellavin).
 
 ---
 
