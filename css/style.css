@@ -1,0 +1,270 @@
+:root {
+	--basic-white: #ffffff;
+	--basic-grey: #EEEEEE;
+	--basic-black: #000000;
+	--basic-red: #FB565A;
+	--basic-yellow: #EFC849;
+	--basic-green: #00CA74;
+}
+
+@font-face {
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: 400;
+	src: local("Roboto");
+	url("roboto.woff2") format("woff2"),
+    url("roboto.woff") format("woff");
+}
+
+@font-face {
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: 700;
+	src: local("Roboto");
+	url("robotobold.woff") format("woff"),
+    url("robotobold.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: 500;
+	src: local("Roboto");
+	url("robotomedium.woff") format("woff"),
+    url("robotomedium.woff2") format("woff2");
+}	
+
+body {
+	min-width: 960px;
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 400;
+	font-family: "Roboto", "Arial", sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.main-nav {
+	line-height: 30px;
+	font-weight: 500;
+	text-transform: uppercase;
+	background-color: #EEEEEE;
+}
+
+.site-nav {
+	list-style: none;
+}
+
+.site-nav-current a:not([href]) {
+	background-color: var(--basic-grey);
+}
+.site-nav a,
+.cart-nav a {
+  	color: var(--basic-black);
+}
+
+.site-nav a:hover,
+.cart-nav a:hover {
+  	color: var(--basic-red);
+}
+
+.site-nav a:focus,
+.cart-nav a:focus {
+	color: rgba(255, 255, 255, 0.3);
+}
+
+h1, .features {
+	background-color: var(--basic-grey);
+}
+
+.features-list {
+	list-style: none;
+}
+
+.feature-item h3 {
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
+}
+
+.services-list {
+	list-style: none;
+	background-color: var(--basic-white);
+}
+
+.service-item h2 {
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.company-info h2 {
+	font-size: 45px;
+  	line-height: 45px;
+  	font-weight: 500;
+}
+
+.main-info h3 {
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 16px;
+}
+
+.statistics h3 {
+	text-align: center;
+}
+
+.statistics-list {
+	list-style: none;
+}
+
+.statistics-item {
+	line-height: 18px;
+}
+
+.statistics-percent {
+	font-weight: 700;
+	font-size: 45px;
+	line-height: 64px;
+	text-transform: uppercase;
+}
+
+sup {
+	font-size: 26px;
+	line-height: 40px;
+}
+
+.clients-list {
+	list-style: none;
+}
+
+.button {
+	font:  inherit;
+	text-align: center;
+	color: var(--basic-white);
+	vertical-align: middle;
+	text-transform: uppercase;
+	background-color: var(--basic-red);
+	border: none;
+	border-radius: 3px;
+}
+
+.button-yellow {
+	background-color: var(--basic-yellow);
+}
+
+.button-green {
+	background-color: var(--basic-green);
+}
+
+.button:hover {
+	background-color: #E74246;
+}
+
+.button:focus {
+	background-color: #D7373B;
+	box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+	color: rgba(255, 255, 255, 0.3);
+}
+
+.button-green:hover {
+	background-color: #00BC6C;
+}
+
+.button-green:focus {
+	background-color: #00AA62;
+	box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+	color: rgba(255, 255, 255, 0.3);
+}
+
+.button-yellow:hover {
+	background-color: #EAB534;
+}
+
+.button-yellow:focus {
+	background-color: #E5A722;
+	box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+	color: rgba(255, 255, 255, 0.3);
+}
+
+.contacts h2 {
+	font-size: 18px;
+	line-height: 30px;
+	font-weight: 700;
+}
+
+.contacts p {
+	line-height: 18px;
+}
+
+.contacts-phone {
+	color:  inherit;
+}
+
+.textus-item input 
+.textus-item textarea {
+	font:  inherit;
+	background-color: transparent;
+	border: 2px solid #D7DCDE;
+}
+
+.textus-form label {
+	font-weight: 700;
+}
+
+.textus-item input:hover,
+.textus-item textarea:hover {
+	border: 2px solid #B4B9BB;
+}
+
+.textus-item input:focus,
+.textus-item textarea:focus,
+.textus-item label:focus {
+	border: 2px solid #000000;
+	color: var(--basic-black);
+}
+
+.textus-item input:invalid,
+.textus-item textarea:invalid {
+	border: 2px solid #E74246;
+	color: #E74246;
+}
+
+footer h2 {
+	font-size: 36px;
+	line-height: 36px;
+	font-weight: 700;
+}
+
+ footer p {
+ 	line-height: 22px;
+}
+
+.footer-socials {
+	list-style: none;
+}
+
+.social-button {
+	color: inherit;
+	background-color: #E1E1E1;
+}
+
+.social-button:hover {
+	background-color: #E74246;
+}
+
+.social-button:focus {
+	background: #D7373B;
+	box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+	color: rgba(255, 255, 255, 0.3);
+}
+
