@@ -11,27 +11,27 @@
 	font-family: "Roboto";
 	font-style: normal;
 	font-weight: 400;
-	src: local("Roboto");
-	url("fonts/roboto.woff2") format("woff2"),
-    url("fonts/roboto.woff") format("woff");
+	src: local("Roboto"),
+	url("../fonts/roboto.woff2") format("woff2"),
+    url("../fonts/roboto.woff") format("woff");
 }
 
 @font-face {
 	font-family: "Roboto";
 	font-style: normal;
 	font-weight: 700;
-	src: local("Roboto");
-	url("fonts/robotobold.woff2") format("woff2"),
-	url("fonts/robotobold.woff") format("woff");
+	src: local("Roboto"),
+	url("../fonts/robotobold.woff2") format("woff2"),
+	url("../fonts/robotobold.woff") format("woff");
 }
 
 @font-face {
-	font-family: "Roboto";
+	font-family: "Roboto"
 	font-style: normal;
 	font-weight: 500;
-	src: local("Roboto");
-	url("fonts/robotomedium.woff2") format("woff2"),
-	url("fonts/robotomedium.woff") format("woff");
+	src: local("Roboto"),
+	url("../fonts/robotomedium.woff2") format("woff2"),
+	url("../fonts/robotomedium.woff") format("woff");
 }	
 
 body {
