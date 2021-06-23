@@ -5,6 +5,15 @@
 	--basic-red: #FB565A;
 	--basic-yellow: #EFC849;
 	--basic-green: #00CA74;
+	--red-hover: #E74246;
+	--red-focus: #D7373B;
+	--green-hover: #00BC6C;
+	--green-focus: #00AA62;
+	--yellow-hover: #EAB534;
+	--yellow-focus: #E5A722;
+	--grey-hover: #B4B9BB;
+	--basic-extra-grey: #D7DCDE;
+	--grey-social: #E1E1E1;
 }
 
 @font-face {
@@ -42,6 +51,7 @@ body {
 	line-height: 24px;
 	font-weight: 400;
 	font-family: "Roboto", "Arial", sans-serif;
+	min-height: 100%;	
 }
 
 a {
@@ -53,11 +63,15 @@ img {
 	height: auto;
 }
 
+.page {
+  height: 100%;
+}
+
 .main-nav {
 	line-height: 30px;
 	font-weight: 500;
 	text-transform: uppercase;
-	background-color: #EEEEEE;
+	background-color: var(--basic-grey);
 }
 
 .site-nav {
@@ -167,31 +181,31 @@ sup {
 }
 
 .button:hover {
-	background-color: #E74246;
+	background-color: var(--red-hover);
 }
 
 .button:focus {
-	background-color: #D7373B;
+	background-color: var(--red-focus);
 	box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 	color: rgba(255, 255, 255, 0.3);
 }
 
 .button-green:hover {
-	background-color: #00BC6C;
+	background-color: var(--green-hover);
 }
 
 .button-green:focus {
-	background-color: #00AA62;
+	background-color: var(--green-focus);
 	box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 	color: rgba(255, 255, 255, 0.3);
 }
 
 .button-yellow:hover {
-	background-color: #EAB534;
+	background-color: var(--yellow-hover);
 }
 
 .button-yellow:focus {
-	background-color: #E5A722;
+	background-color: var(--yellow-focus);
 	box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 	color: rgba(255, 255, 255, 0.3);
 }
@@ -214,7 +228,7 @@ sup {
 .textus-item textarea {
 	font:  inherit;
 	background-color: transparent;
-	border: 2px solid #D7DCDE;
+	border: 2px solid var(--basic-extra-grey);
 }
 
 .textus-form label {
@@ -223,20 +237,20 @@ sup {
 
 .textus-item input:hover,
 .textus-item textarea:hover {
-	border: 2px solid #B4B9BB;
+	border: 2px solid var(--grey-hover);
 }
 
 .textus-item input:focus,
 .textus-item textarea:focus,
 .textus-item label:focus {
-	border: 2px solid #000000;
+	border: 2px solid var(--basic-black);
 	color: var(--basic-black);
 }
 
 .textus-item input:invalid,
 .textus-item textarea:invalid {
-	border: 2px solid #E74246;
-	color: #E74246;
+	border: 2px solid var(--red-hover);
+	color: var(--red-hover);
 }
 
 footer h2 {
@@ -255,15 +269,15 @@ footer h2 {
 
 .social-button {
 	color: inherit;
-	background-color: #E1E1E1;
+	background-color: var(--grey-social);
 }
 
 .social-button:hover {
-	background-color: #E74246;
+	background-color: var(--red-hover);
 }
 
 .social-button:focus {
-	background: #D7373B;
+	background: var(--red-focus);
 	box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 	color: rgba(255, 255, 255, 0.3);
 }
@@ -319,6 +333,16 @@ footer h2 {
 
 .catalog-list {
 	list-style: none;
+	margin: 0;
+  	padding: 0 10px;
+  	display: grid;
+  	grid-template-columns: 360px 360px;
+  	column-gap: 40px;
+}
+
+.catalog-container {
+	margin-bottom: 55px;
+	outline: 5px solid rgba(255, 0, 0 , 0.3);
 }
 
 .sorting {
@@ -334,6 +358,10 @@ footer h2 {
 	font-weight: 400;
 	line-height: 18px;
 	color: rgba(0, 0, 0, 0.3);
+}
+
+.catalog-item {
+	margin-bottom: 30px;
 }
 
 .sorting-item:hover {
@@ -403,4 +431,3 @@ footer h2 {
 	background-color: var(--basic-white);
 	border: 3px solid #DBDBDB;
 }
-
