@@ -14,6 +14,12 @@
 	--grey-hover: #B4B9BB;
 	--basic-extra-grey: #D7DCDE;
 	--grey-social: #E1E1E1;
+	--basic-dark-grey: #666666;
+	--grey-catalog-hover: #DFDFDF;
+	--grey-catalog-focus: #D5D5D5;
+	--grey-cat-nav-item: #DBDBDB;
+	--black-filter: #283136;
+	--dark-grey-hover: #4D4D4D;
 }
 
 @font-face {
@@ -67,15 +73,54 @@ img {
   height: 100%;
 }
 
+.main-header {
+	margin-bottom: ;
+	background-color: var(--basic-grey);
+}
+
 .main-nav {
 	line-height: 30px;
 	font-weight: 500;
 	text-transform: uppercase;
 	background-color: var(--basic-grey);
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+.main-navigation-wrapper {
+	width: 100%;
+	margin-bottom: ;
+	display: flex;
+	justify-content: space-between;
+}
+
+.main-header-logo {
+	width: 160px;
+	height: 65px;
+}
+
+.container {
+	width: 1159.84px;
+	margin: 0 auto;
+	padding: 0;
 }
 
 .site-nav {
 	list-style: none;
+	width: 640px;
+	margin: 0;
+	padding: 0;
+	padding-left: 202.13px;
+}
+
+.cart-nav {
+	max-width: 160px;
+}
+
+.cart-nav .cart-link {
+	padding-left: 50px;
 }
 
 .site-nav-current a:not([href]) {
@@ -96,26 +141,45 @@ img {
 	color: rgba(255, 255, 255, 0.3);
 }
 
+.features {
+	margin-bottom: 121px;	
+}
+
 h1, .features {
 	background-color: var(--basic-grey);
 }
 
 .features-list {
 	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 .feature-item h3 {
   font-size: 55px;
   line-height: 55px;
-  font-weight: 500;
+  font-weight: 500;  
+}
+
+.services {
+	margin-bottom: 121px;
 }
 
 .services-list {
 	list-style: none;
 	background-color: var(--basic-white);
+	display: flex;
+	margin: 0;
+	padding: 0;
+	justify-content: space-between;
+	width: 1100px;
 }
 
-.service-item h2 {
+.service-item {
+	width: 300px;
+ }
+
+.service-item h3 {
   line-height: 30px;
   font-weight: 700;
   text-transform: uppercase;
@@ -127,14 +191,47 @@ h1, .features {
   	font-weight: 500;
 }
 
+.main-info {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 73px;
+}
+
+.company-info {
+	width: 651px;
+ }
+
+.main-info h2 {
+	margin: 0;
+	margin-bottom: 32px;
+ }
+
+.main-info p {
+	margin: 0;
+	margin-bottom: 40px;
+}
+
 .main-info h3 {
 	font-weight: 700;
 	text-transform: uppercase;
 	font-size: 16px;
 }
 
+.info-list {
+	margin-bottom: 23px;
+}
+
+.statistics {
+  	width: 360px;
+  }
+
 .statistics h3 {
 	text-align: center;
+}
+
+.statistics img {
+	width: 360px;
+	height: 208px;
 }
 
 .statistics-list {
@@ -158,7 +255,11 @@ sup {
 }
 
 .clients-list {
-	list-style: none;
+	list-style: none;	
+  	display: flex;
+  	justify-content: space-between;
+  	width: 1159px;
+  	margin-bottom: 80px;
 }
 
 .button {
@@ -253,10 +354,18 @@ sup {
 	color: var(--red-hover);
 }
 
+.footer {
+	display: flex;
+	justify-content: space-between;
+	width: 1060px;
+	margin-bottom: 68px;
+}
+
 footer h2 {
 	font-size: 36px;
 	line-height: 36px;
 	font-weight: 700;
+	margin: 0;
 }
 
  footer p {
@@ -298,7 +407,7 @@ footer h2 {
 .filter ul {
 	list-style: none;
 	line-height: 20px;
-	color: #283136;
+	color: var(--black-filter);
 }
 
 .filter-input-radio {
@@ -307,7 +416,7 @@ footer h2 {
 
 .filter-input-radio:hover,
 .filter-input-radio:focus {
-	color: #4D4D4D;
+	color: var(--dark-grey-hover);
 }
 
 .filter-input-checkbox {
@@ -316,13 +425,13 @@ footer h2 {
 
 .filter-input-checkbox:hover,
 .filter-input-checkbox:focus {
-	color: #4D4D4D;
+	color: var(--dark-grey-hover);
 }
 
 .price-range {
 	text-transform: uppercase;
 	line-height: 22px;
-	color: #283136;
+	color: var(--black-filter);
 }
 
 .filter-input-range {
@@ -370,7 +479,7 @@ footer h2 {
 
 .sorting-item:focus,
 .sorting-item:active {
-	color: #000000;
+	color: var(--basic-black);
 }
 
 .sorting-item-active,
@@ -394,7 +503,7 @@ footer h2 {
 
 .catalog-item-info p {
 	line-height: 30px;
-	color: #666666;
+	color: var(--basic-dark-grey);
 }
 
 .price-button {
@@ -415,11 +524,11 @@ footer h2 {
 }
 
 .catalog-nav-item a:hover {
-	background-color: #DFDFDF;
+	background-color: var(--grey-catalog-hover);
 }
 
 .catalog-nav-item a:focus {
-	background-color: #D5D5D5;
+	background-color: var(--grey-catalog-focus);
 	color: rgba(0, 0, 0, 0.3);
 	box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
