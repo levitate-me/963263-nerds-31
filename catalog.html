@@ -31,7 +31,9 @@
     <main class="page-catalog container">
       <h1 class="page-title">Магазин готовых шаблонов</h1>
 
-      <section class="filters">
+      <div class="content-layout container">
+        <div class="content-layout-left">
+          <section class="filters">
         <h2>Фильтр услуг</h2>
         <form class="filter" method="get" action="https://echo.htmlacademy.ru">
           <fieldset>
@@ -48,15 +50,15 @@
             <ul>
               <li class="filter-option filter-radio">
                 <input class="filter-input-radio filter-input" type="radio" name="grid" value="adaptive" id="filter-adaptive" checked>
-                <label for="filter-adaptive">Адаптивная</label>
+                <label class="filter-label-radio filter-label" for="filter-adaptive">Адаптивная</label>
               </li>
               <li class="filter-option filter-radio">
                 <input class="filter-input-radio filter-input" type="radio" name="grid" value="fixed" id="filter-fixed">
-                <label for="filter-fixed">Фиксированная</label>
+                <label class="filter-label-radio filter-label" for="filter-fixed">Фиксированная</label>
               </li>
               <li class="filter-option filter-radio">
                 <input class="filter-input-radio filter-input" type="radio" name="grid" value="rubber" id="filter-rubber">
-                <label for="filter-rubber">Резиновая</label>
+                <label class="filter-label-radio filter-label" for="filter-rubber">Резиновая</label>
               </li>
             </ul>
           </fieldset>
@@ -65,31 +67,32 @@
             <ul>
               <li class="filter-option filter-checkbox">
                 <input class="filter-input-checkbox filter-input" type="checkbox" name="slider" id="filter-slider" checked>
-                <label for="filter-slider">Слайдер</label>
+                <label class="filter-label-checkbox filter-label" for="filter-slider">Слайдер</label>
               </li>
               <li class="filter-option filter-checkbox">
                 <input class="filter-input-checkbox filter-input" type="checkbox" name="advantages" id="filter-advantages">
-                <label for="filter-advantages">Блок преимуществ</label>
+                <label class="filter-label-checkbox filter-label" for="filter-advantages">Блок преимуществ</label>
               </li>
               <li class="filter-option filter-checkbox">
                 <input class="filter-input-checkbox filter-input" type="checkbox" name="news" id="filter-news" checked>
-                <label for="filter-news">Новости</label>
+                <label class="filter-label-checkbox filter-label" for="filter-news">Новости</label>
               </li>
               <li class="filter-option filter-checkbox">
                 <input class="filter-input-checkbox filter-input" type="checkbox" name="galery" id="filter-galery">
-                <label for="filter-galery">Галерея</label>
+                <label class="filter-label-checkbox filter-label" for="filter-galery">Галерея</label>
               </li>
               <li class="filter-option filter-checkbox">
                 <input class="filter-input-checkbox filter-input" type="checkbox" name="shopping-cart" id="filter-shopping-cart">
-                <label for="filter-shopping-cart">Корзина</label>
+                <label class="filter-label-checkbox filter-label" for="filter-shopping-cart">Корзина</label>
               </li>
             </ul>
           </fieldset>
           <button class="filter-button button" type="submit">Показать</button>
         </form>
       </section>
-
-      <section>
+        </div>
+        <div class="content-layout-center">
+          <section>
         <h2>Список готовых шаблонов</h2>
         <div class="sorting">
           Сортировать:
@@ -158,6 +161,12 @@
           <li class="catalog-nav-item"><a href="#">Следующая</a></li>
         </ul>
       </section>
+
+        </div>
+      </div>
+      
+
+      
       <section class="contacts">
         <h2>NЁRDS DESIGN STUDIO</h2>
         <p>

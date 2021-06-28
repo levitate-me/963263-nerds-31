@@ -102,9 +102,24 @@ img {
 }
 
 .container {
-	width: 1159.84px;
+	width: 1200px;
 	margin: 0 auto;
-	padding: 0;
+	padding: 0 20px;
+	box-sizing: border-box;
+}
+
+.content-layout {
+	display: flex;	
+}
+
+.content-layout-center {
+	flex-grow: 1;
+}
+
+.content-layout-left {
+	flex-shrink: 0;
+	flex-basis: 260px;
+	margin-right: 140px;
 }
 
 .site-nav {
@@ -161,6 +176,10 @@ h1, .features {
   font-weight: 500;  
 }
 
+.feature-button {
+	width: 240px;
+}
+
 .services {
 	margin-bottom: 121px;
 }
@@ -183,6 +202,10 @@ h1, .features {
   line-height: 30px;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.services-button {
+	width: 160px;
 }
 
 .company-info h2 {
@@ -262,15 +285,21 @@ sup {
   	margin-bottom: 80px;
 }
 
-.button {
-	font:  inherit;
+.button {	
+	display: block;
+	padding-top: 17px;
+	padding-bottom: 15px;
+
 	text-align: center;
-	color: var(--basic-white);
-	vertical-align: middle;
-	text-transform: uppercase;
-	background-color: var(--basic-red);
+	line-height: 18px;
+	font-size: 16px;
+	color: var(--basic-white);	
+	text-transform: uppercase;	
+
 	border: none;
 	border-radius: 3px;
+	background-color: var(--basic-red);
+	box-shadow: none;
 }
 
 .button-yellow {
@@ -408,7 +437,68 @@ footer h2 {
 	list-style: none;
 	line-height: 20px;
 	color: var(--black-filter);
+	padding-left: 0;
+	margin-top: 0;
+	margin-bottom: 0;
 }
+
+.filter-option {
+	margin-top: 20px;
+}
+
+.filter-option:first-child {
+	margin-top: 16px;
+}
+
+.filter-input {
+	appearance: none;
+    -moz-appearance: none;
+	-webkit-appearance: none;
+}
+
+.filter-label {
+	position: relative;
+	padding-left: 36px;	
+}
+
+.filter-label::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+
+	display: block;
+	width: 25px;
+	height: 25px;
+	background-image: url(../img/icons/radio-off.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.filter-label-checkbox::before {
+	background-image: url(../img/icons/checkbox-off.svg);
+}
+
+.filter-input:checked + .filter-label::before {
+	background-image: url(../img/icons/radio-on.svg);
+}
+
+.filter-input-checkbox:checked + .filter-label::before {
+	background-image: url(../img/icons/checkbox-on.svg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 .filter-input-radio {
 	color: rgba(77, 77, 77, 0.4);
