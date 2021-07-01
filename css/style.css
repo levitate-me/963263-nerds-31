@@ -57,7 +57,7 @@ body {
 	line-height: 24px;
 	font-weight: 400;
 	font-family: "Roboto", "Arial", sans-serif;
-	min-height: 100%;	
+	min-height: 100%;
 }
 
 a {
@@ -109,7 +109,7 @@ img {
 }
 
 .content-layout {
-	display: flex;	
+	display: flex;
 }
 
 .content-layout-center {
@@ -173,7 +173,7 @@ h1, .features {
 .feature-item h3 {
   font-size: 55px;
   line-height: 55px;
-  font-weight: 500;  
+  font-weight: 500;
 }
 
 .feature-button {
@@ -278,14 +278,14 @@ sup {
 }
 
 .clients-list {
-	list-style: none;	
+	list-style: none;
   	display: flex;
   	justify-content: space-between;
   	width: 1159px;
   	margin-bottom: 80px;
 }
 
-.button {	
+.button {
 	display: block;
 	padding-top: 17px;
 	padding-bottom: 15px;
@@ -293,8 +293,9 @@ sup {
 	text-align: center;
 	line-height: 18px;
 	font-size: 16px;
-	color: var(--basic-white);	
-	text-transform: uppercase;	
+	font-weight: 500;
+	color: var(--basic-white);
+	text-transform: uppercase;
 
 	border: none;
 	border-radius: 3px;
@@ -354,6 +355,28 @@ sup {
 	color:  inherit;
 }
 
+.contacts-button {
+	width: 219px;
+}
+
+.contacts img {
+	margin-bottom: 68px;
+}
+
+.textus h2 {
+	margin: 0;
+	margin-bottom: 37px;
+}
+
+.textus-item {
+	margin: 0;
+	margin-bottom: 34px;
+}
+
+.textus-form .letter {
+	margin-bottom: 47px;
+} 
+
 .textus-item input 
 .textus-item textarea {
 	font:  inherit;
@@ -381,6 +404,10 @@ sup {
 .textus-item textarea:invalid {
 	border: 2px solid var(--red-hover);
 	color: var(--red-hover);
+}
+
+.button-textus {
+	width: 219px;
 }
 
 .footer {
@@ -420,18 +447,45 @@ footer h2 {
 	color: rgba(255, 255, 255, 0.3);
 }
 
+.inner-page .main-nav {
+	margin-bottom: 87px;
+}
+
+.inner-page .main-header {
+	margin-bottom: 55px;
+}
+
 .page-title {
 	font-size: 55px;
 	line-height: 55px;
 	font-weight: 500;
+	margin: 0;
+	padding-bottom: 108px;
+}
+
+.filter fieldset {
+	padding: 0;
+	margin: 0;
+	margin-bottom: 48px;
+	border: none;
+}
+
+.filter fieldset:first-child {
+margin-bottom: 54px;
 }
 
 .filter legend {
+	margin-bottom: 16px;
 	font-size: 18px;
 	line-height: 30px;
 	font-weight: 700;
 	text-transform: uppercase;
 }
+
+.filter .price-legend {
+	margin-bottom: 48px;
+}
+/*не работает?*/
 
 .filter ul {
 	list-style: none;
@@ -458,7 +512,7 @@ footer h2 {
 
 .filter-label {
 	position: relative;
-	padding-left: 36px;	
+	padding-left: 36px;
 }
 
 .filter-label::before {
@@ -524,10 +578,18 @@ footer h2 {
 	color: var(--black-filter);
 }
 
+/*.fieldset .price-range {
+	margin-bottom: 54px;
+}*/
+
 .filter-input-range {
 	background-color: var(--basic-grey);
 	border: none;
 	border-radius: 3px;
+}
+
+.filter-button {
+	width: 260px;
 }
 
 .catalog-list {
@@ -541,7 +603,6 @@ footer h2 {
 
 .catalog-container {
 	margin-bottom: 55px;
-	outline: 5px solid rgba(255, 0, 0 , 0.3);
 }
 
 .sorting {
@@ -597,9 +658,7 @@ footer h2 {
 }
 
 .price-button {
-	color: var(--basic-white);
-	background-color: var(--basic-red);
-	border-radius: 3px;
+	width: 200px;
 }
 
 .catalog-nav-list {
@@ -629,4 +688,8 @@ footer h2 {
 .catalog-nav-item-current a:active {
 	background-color: var(--basic-white);
 	border: 3px solid #DBDBDB;
+}
+
+.return-button {
+	width: 219px;
 }
