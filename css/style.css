@@ -24,6 +24,9 @@
 	--green-scale: #00CA74;
 	--grey-toggle: #ABABAB;
 	--grey-toggle-shadow: #cfcfcf;
+	--grey-button-current: #c1c1c1;
+	--grey-arrow-hover: #A6A6A6;
+	--black-arrow-focus: #231F20;
 }
 
 @font-face {
@@ -103,6 +106,7 @@ img {
 .main-header-logo {
 	width: 160px;
 	height: 65px;
+	padding-top: 53px;
 }
 
 .container {
@@ -165,7 +169,7 @@ img {
 .cart-nav a {
   	color: var(--basic-black);
   	display: block;
-  	padding: 75px 22.5px 9px 22.5px;
+  	padding: 75px 22.5px 0px 22.5px;
 }
 
 .site-nav a:hover,
@@ -175,7 +179,12 @@ img {
 
 .site-nav a:focus,
 .cart-nav a:focus {
-	color: rgba(255, 255, 255, 0.3);
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.site-nav a:active,
+.cart-nav a:active {
+	border-bottom: solid 2px var(--basic-red);
 }
 
 .features {
@@ -249,11 +258,21 @@ h1, .features {
 	justify-content: space-between;
 }
 
-.feature-controls .current {
+/*.feature-controls .current {
 	width: 8px;
 	height: 8px;
 	background-color: none;
 	border: 2px solid #C1C1C1;
+	border-radius: 50%;
+}*/
+
+button.current::before {
+	content: '';
+	display: flex;
+	margin: auto;
+	width: 4px;
+	height: 4px;
+	border: 2px solid var(--grey-button-current);
 	border-radius: 50%;
 }
 
@@ -442,6 +461,19 @@ sup {
 	color: rgba(255, 255, 255, 0.3);
 }
 
+.contacts {
+	position: relative;
+}
+
+.contacts-container {
+	position: absolute;
+	padding: 30px;
+	left: 40px;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: var(--basic-white);
+}
+
 .contacts h2 {
 	font-size: 18px;
 	line-height: 30px;
@@ -461,7 +493,8 @@ sup {
 }
 
 .contacts img {
-	margin-bottom: 68px;
+	margin-bottom: 0;
+	display: block;
 }
 
 /*.textus {
@@ -477,71 +510,55 @@ sup {
 	webkit-appearance: none;
 }*/
 
+.textus {
+	width: 960px;
+	padding: 63px 100px 84px;
+	box-shadow: 0px 20px 40px 0px #00000066;
+}
+
 .textus h2 {
 	font-size: 45px;
 	line-height: 53px;
-	font-weight: 700;
-	margin: 0;
-	margin-bottom: 37px;	
+	font-weight: 700;		
 }
-
-.textus-item {
-	margin: 0;
-	margin-bottom: 34px;
-	width: 360px;
-}
-
-.textus-item input {
-	width: 360px;
-}
-
-.textus-form {
-	width: 761px;
-}
-
-/*.textus-form {
-	display: flex;
-	flex-wrap: wrap;
-	width: 760px;
-}*/
 
 .textus-data {
 	display: flex;
 	justify-content: space-between;
-	width: 761px;
+	width: 760px;
+}
+
+.textus-data input {
+	margin-bottom: 34px;
+	box-sizing: border-box;
+	padding: 16px 14px 16px 16px;
 }
 
 .letter {
-	display: flex;
-	flex-wrap: wrap;
-	width: 760px;
-}
-
-.textus-text {
-	width: 760px;
-}
-
-/*.textus-form-data {
-	display: flex;
-}*/
-
-.textus-item .textarea {
-	display: block;
-	width: 100%;
-}
-
-.text-item-name,
-.text-item-email {
-	width: 360px;
-}
-
-.textus-form .letter {
 	margin-bottom: 47px;
+}
+
+.textus-item label {
+	display: block;
+	margin-bottom: 9px;
+}
+
+.textus-item input {
+	width: 360px;
+	min-height: 50px;
+}
+
+.textus-form textarea {
 	width: 760px;
+	min-height: 118px;
+	box-sizing: border-box;
+	padding-top: 16px;
+	padding-left: 16px;
 } 
 
 .textus-item input 
 .textus-item textarea {
+	display: block;
 	font:  inherit;
 	background-color: transparent;
 	border: 2px solid var(--basic-extra-grey);
@@ -642,7 +659,7 @@ footer h2 {
 	line-height: 55px;
 	font-weight: 500;
 	margin: 0;
-	padding-bottom: 108px;
+	padding-bottom: 104px;
 }
 
 .filter fieldset {
@@ -876,20 +893,33 @@ margin-bottom: 54px;
 	margin-left: 25px;
 }
 
-.sorting-list li:last-child::after {
-	content: "";
-	position: absolute;
-	left: 150px;
-	top: 30%;
-	right: -30px;
-	transform: translateY(-50%);
+.sorting-arrows {
+	display: flex;
+	justify-content: space-between;
+	width: 40px;
+}
 
-	display: block;
+.sorting-arrow {
 	width: 11px;
-	height: 10px;
-	background-image: url(../img/icons/icon-down-dir.svg);
-	background-repeat: no-repeat;
-	background-position: center;
+}
+
+.sorting-arrow path {
+	fill: rgba(166, 166, 166, 0.2);
+}
+
+.sorting-arrow path:hover {
+	fill: var(--grey-arrow-hover);
+}
+
+.sorting-arrow path:focus,
+.sorting-arrow path:active {
+	fill: var(--black-arrow-focus);
+}
+
+.sorting-arrow-active path,
+.sorting-arrow-active path:focus,
+.sorting-arrow-active path:active {
+	fill: var(--black-arrow-focus);
 }
 
 .catalog-item {
@@ -919,6 +949,8 @@ margin-bottom: 54px;
 }
 
 .catalog-item-title {
+	padding-top: 26px;
+	margin-bottom: 12px;
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: 18px;
