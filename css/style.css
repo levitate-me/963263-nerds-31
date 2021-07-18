@@ -27,6 +27,7 @@
 	--grey-button-current: #c1c1c1;
 	--grey-arrow-hover: #A6A6A6;
 	--black-arrow-focus: #231F20;
+	--grey-footer: #444444;
 }
 
 @font-face {
@@ -48,7 +49,7 @@
 }
 
 @font-face {
-	font-family: "Roboto"
+	font-family: "Roboto";
 	font-style: normal;
 	font-weight: 500;
 	src: local("Roboto"),
@@ -65,6 +66,8 @@ body {
 	font-weight: 400;
 	font-family: "Roboto", "Arial", sans-serif;
 	min-height: 100%;
+	display: grid;
+	grid-template-rows: min-content 1fr min-content;
 }
 
 a {
@@ -81,7 +84,6 @@ img {
 }
 
 .main-header {
-	margin-bottom: ;
 	background-color: var(--basic-grey);
 }
 
@@ -98,14 +100,18 @@ img {
 
 .main-navigation-wrapper {
 	width: 100%;
-	margin-bottom: ;
 	display: flex;
 	justify-content: space-between;
+	padding-top: 14px;
+}
+
+.main-header-logo img {
+	width: 160px;
+	height: 65px;
 }
 
 .main-header-logo {
-	width: 160px;
-	height: 65px;
+	flex-shrink: 0;
 }
 
 .main-header-logo img:hover {
@@ -144,7 +150,7 @@ img {
 	width: 640px;
 	margin: 0;
 	padding: 0;
-	padding-left: 202.13px;
+	padding-left: 179px;
 }
 
 .cart-nav {
@@ -152,15 +158,15 @@ img {
 }
 
 .cart-nav .cart-link {
-	padding-left: 50px;
+	padding-left: 62px;
 	position: relative;
 }
 
 .cart-link::before {
 	content: "";
 	position: absolute;
-	left: 10px;
-	top: 7px;
+	left: 22px;
+	top: 8px;
 	display: block;
 	width: 15px;
 	height: 15px;
@@ -194,11 +200,11 @@ img {
 
 .nav-item-active a {
 	border-bottom: solid 2px var(--basic-red);
+	padding-bottom: 13px;
 }
 
 .features {
 	position: relative;
-	margin-bottom: 80px;
 }
 
 h1, .features {
@@ -223,26 +229,28 @@ h1, .features {
 	margin: 0;
 	padding: 0;
 	margin-bottom: 25px;
-	padding-top: 78px;
+	padding-top: 70px;
 	font-size: 55px;
   line-height: 55px;
   font-weight: 500;
+  color: var(--basic-black);
 }
 
 .features-list {
 	list-style: none;
 	margin: 0;
-	padding: 0;
-	
+	padding: 0;	
 }
 
 .feature-item {
-	margin-bottom: 0px;
 	display: none;
-	background-image: url("../img/nerds-index-slide1 1.png");
+	background-image: url("../img/nerds-index-slide1.png");
 	background-repeat: no-repeat;
 	background-position: right top;
+	background-size: 760px 431px;
 	padding-bottom: 80px;
+	margin-top: 0;
+	color: var(--black-filter);
 }
 
 .feature-current {
@@ -250,7 +258,7 @@ h1, .features {
 }
 
 .feature-item p {
-	margin-bottom: 38px;
+	margin-bottom: 41px;
 }
 
 .feature-button {
@@ -290,7 +298,7 @@ button.current::before {
 
 .services {
 	padding-bottom: 80px;
-	margin-bottom: 39px;
+	margin-top: 80px;
 	border-bottom: 2px solid var(--basic-grey);
 }
 
@@ -306,13 +314,15 @@ button.current::before {
 
 .service-item {
 	width: 300px;
+	margin: 0;
+	padding: 0;
  }
 
  .service-item img {
  	margin: 0;
  	padding: 0;
- 	margin-top: 39px;
- }
+ 	margin-bottom: 20px;
+}
 
 .service-item h3 {
 	font-size: 24px;
@@ -320,8 +330,15 @@ button.current::before {
   font-weight: 700;
   text-transform: uppercase;
   margin: 0;
+  padding: 0;
   margin-bottom: 16px;
-  margin-top: 25px;
+  color: var(--basic-black);
+}
+
+.service-item p {
+	color: var(--black-filter);
+	margin: 0;
+	margin-bottom: 32px;
 }
 
 .services-button {
@@ -333,19 +350,27 @@ button.current::before {
   line-height: 45px;
   font-weight: 500;
   margin: 0;
+  color: var(--basic-black);
+  padding-top: 34px;
 }
 
 .main-info {
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 73px;
+	margin-top: 39px;
 }
 
 .company-info {
 	width: 651px;
  }
 
-.main-info h2 {
+ .company-info p,
+ .company-info h3 {
+ 	color: var(--black-filter);
+ }
+
+ .main-info h2 {
 	margin: 0;
 	margin-bottom: 32px;
  }
@@ -364,6 +389,7 @@ button.current::before {
 
 .info-list {
 	margin-bottom: 23px;
+	margin: 0;
 	list-style: none;
 	height: 120px;
 	display: flex;
@@ -374,12 +400,13 @@ button.current::before {
 .info-item {
 	position: relative;
 	line-height: 24px;
+	color: var(--black-filter);
 }
 
 .info-item::before {
 	content: "";
 	position: absolute;
-	left: -37px;
+	left: -39px;
 	top: 50%;
 	transform: translateY(-50%);
 	width: 25px;
@@ -394,11 +421,17 @@ button.current::before {
 
 .statistics h3 {
 	text-align: center;
+	color: var(--basic-black);
+	margin: 0;
+	padding: 0;
+	margin-top: 30px;
+	margin-bottom: 31px;
 }
 
 .statistics img {
 	width: 360px;
 	height: 208px;
+	margin: 0;
 }
 
 .statistics-list {
@@ -413,6 +446,7 @@ button.current::before {
 
 .statistics-item {
 	line-height: 18px;
+	color: var(--black-filter);
 }
 
 .statistics-percent {
@@ -420,6 +454,13 @@ button.current::before {
 	font-size: 45px;
 	line-height: 64px;
 	text-transform: uppercase;
+	color: var(--basic-black);
+	padding-right: 22px;
+}
+
+.statistics-info {
+	padding-top: 10px;
+	display: block;
 }
 
 sup {
@@ -554,9 +595,17 @@ sup {
 	background-repeat: no-repeat;
 }
 
+iframe {
+	border: 0;
+	width: 100%;
+}
+
 .contacts-wrapper {
 	position: absolute;
-	padding: 30px;
+	padding-top: 49px;
+	padding-right: 50px;
+	padding-bottom: 47px;
+	padding-left: 50px;
 	top: 50%;
 	transform: translateY(-50%);
 	background-color: var(--basic-white);
@@ -566,14 +615,22 @@ sup {
 	font-size: 18px;
 	line-height: 30px;
 	font-weight: 700;
+	padding: 0;
+	margin: 0;
+	margin-bottom: 23px;
 }
 
 .contacts p {
 	line-height: 18px;
+	color: var(--basic-dark-grey);
+	margin: 0;
+	margin-bottom: 37px;
 }
 
 .contacts-phone {
 	color:  inherit;
+	display: block;
+	padding-top: 12.5px;
 }
 
 .contacts-button {
@@ -695,8 +752,7 @@ sup {
 	display: flex;
 	justify-content: space-between;
 	width: 1060px;
-	margin-top: 68px;
-	margin-bottom: 68px;
+	margin-top: 64px;
 }
 
 footer h2 {
@@ -707,10 +763,6 @@ footer h2 {
 	width: 660px;
 }
 
- footer p {
- 	line-height: 22px;
-}
-
 .footer-socials {
 	display: flex;
 	flex-wrap: wrap;
@@ -719,10 +771,22 @@ footer h2 {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+	margin-bottom: 68px;
 }
 
 .footer-discount {
 	margin-left: 139px;
+}
+
+.footer-discount h2 {
+	margin-bottom: 10px;
+}
+
+.footer-discount p {
+	line-height: 22px;
+	color: var(--grey-footer);
+	margin: 0;
+	padding: 0;
 }
 
 .social-button {
@@ -752,7 +816,7 @@ footer h2 {
 }
 
 .inner-page .main-nav {
-	margin-bottom: 87px;
+	margin-bottom: 68px;
 }
 
 .inner-page .main-header {
@@ -768,7 +832,7 @@ footer h2 {
 	line-height: 55px;
 	font-weight: 500;
 	margin: 0;
-	padding-bottom: 104px;
+	padding-bottom: 108px;
 }
 
 .filter fieldset {
@@ -783,7 +847,6 @@ margin-bottom: 54px;
 }
 
 .filter legend {
-	margin-bottom: 16px;
 	font-size: 18px;
 	line-height: 30px;
 	font-weight: 700;
@@ -983,7 +1046,7 @@ margin-bottom: 54px;
 .catalog-list {
 	list-style: none;
 	margin: 0;
-  padding: 0 10px;
+  padding: 0 20px 0 0;
   display: grid;
   grid-template-columns: 360px 360px;
   column-gap: 40px;
@@ -1030,20 +1093,21 @@ margin-bottom: 54px;
 	opacity: 1;
 }
 
-.catalog-item-title {
+.catalog-item-title a {
 	margin-bottom: 12px;
 	margin-top: 0;
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: 18px;
 	line-height: 30px;
+	color: var(--basic-black);
 }
 
-.catalog-item-title:hover {
+.catalog-item-title a:hover {
 	color: var(--basic-red);
 }
 
-.catalog-item-title:active {
+.catalog-item-title a:active {
 	color: var(--basic-black);
 	opacity: 0.3;
 }
@@ -1061,7 +1125,7 @@ margin-bottom: 54px;
 }
 
 .catalog-container {
-	margin-bottom: 25px;
+	margin-bottom: 15px;
 }
 
 .sorting {
@@ -1081,17 +1145,26 @@ margin-bottom: 54px;
 	justify-content: flex-end;
 	padding: 0;
 	margin: 0;
-	padding-right: 87px;
+	padding-left: 190px;
 	list-style: none;
 	font-size: 14px;
 	font-weight: 400;
 	line-height: 18px;
 	color: rgba(0, 0, 0, 0.3);
+	margin-top: auto;
+	margin-bottom: auto;
 }
 
 .sorting-list li {
 	position: relative;
+	padding: 0;
+	margin: 0;
 	margin-left: 25px;
+}
+
+.sorting-list a {
+	color: var(--basic-black);
+	opacity: 0.3;
 }
 
 .sorting-arrows {
@@ -1123,26 +1196,30 @@ margin-bottom: 54px;
 	fill: var(--black-arrow-focus);
 }
 
-.sorting-item:hover {
+.sorting-item {
+	cursor: pointer;
+}
+
+.sorting-item a:hover {
 	color: rgba(0, 0, 0, 0.6);
 }
 
-.sorting-item:focus,
-.sorting-item:active {
+.sorting-item a:focus,
+.sorting-item a:active {
 	color: var(--basic-black);
 }
 
-.sorting-item-active,
-.sorting-item-active:hover
-.sorting-item-active:focus,
-.sorting-item-active:active {
+.sorting-item-active a,
+.sorting-item-active a:hover,
+.sorting-item-active a:focus,
+.sorting-item-active a:active {
 	color: var(--basic-black);
+	opacity: 1;
 }
 
 .catalog-nav-list {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: ;
 	padding: 0;
 	margin: 0;
 	list-style: none;
