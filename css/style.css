@@ -589,10 +589,10 @@ sup {
 }
 
 .contacts-container {
-	width: 1440px;
 	padding: 0;
 	background-image: url(../img/map_1.png);
 	background-repeat: no-repeat;
+	background-position: center;
 }
 
 iframe {
